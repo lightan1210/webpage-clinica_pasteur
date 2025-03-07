@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,70 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.NavBar {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavBar > ul {
+  background-color: white;
+  display: flex;
+  gap: 3px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.NavBar li {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 1px solid #c75eae;
+  border-right: 1px solid #c75eae;
+  border-top: 1px solid #c75eae;
+  display: block;
+  text-transform: uppercase;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.NavBar li:first-child {
+  background-color: #eebae2;
+}
+
+.NavBar li:hover {
+  background-color: #eebae2;
+  cursor:pointer;
+  transition-duration: .4s;
+}
+
+.NavBar li:hover>a {
+  color: white;
+}
+.NavBar li:last-child {
+  border-right: none;
+}
+
+.NavBar li{
+  color: #c75eae;
+  text-align: center;
+}
+
+.NavBar li:first-child>a {
+  color: white;
+}
+
+.SearchBar {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.SearchBar > input {
+  margin: 20px 0;
+  outline: none;
+  width: 100%;
+}
+
+hr {
+  background-color: #332a86;
+  height: 10px;
+  margin: 0;
 }
