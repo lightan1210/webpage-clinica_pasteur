@@ -4,7 +4,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,22 +19,29 @@
 .NavBar > ul {
   background-color: white;
   display: flex;
-  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  width: 100%;
 }
 
 .NavBar li {
+  align-items: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-left: 1px solid #c75eae;
   border-right: 1px solid #c75eae;
   border-top: 1px solid #c75eae;
-  display: block;
-  text-transform: uppercase;
-  padding: 10px 0;
-  width: 100%;
+  border-bottom: 1px solid #c75eae;
+  color: #c75eae;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  font-size: .8em;
+  padding: 5px;
+  text-transform: capitalize;
 }
 
 .NavBar li:first-child {
@@ -53,11 +59,6 @@
 }
 .NavBar li:last-child {
   border-right: none;
-}
-
-.NavBar li{
-  color: #c75eae;
-  text-align: center;
 }
 
 .NavBar li:first-child>a {
@@ -79,4 +80,12 @@ hr {
   background-color: #332a86;
   height: 10px;
   margin: 0;
+  width: 100vw;
+}
+
+@media (max-width: 767px) {
+  .NavBar ul {
+    flex-direction: column;
+    font-size: 1.5em;
+  }
 }
