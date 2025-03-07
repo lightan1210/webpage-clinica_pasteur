@@ -4,6 +4,7 @@ export default function Header() {
             <form className="SearchBar" >
                 <input type="text" name="searchBar" placeholder="Buscar..."></input>
             </form>
+            <div className="BurgerButton">≡</div>
             <nav className="NavBar">
                 <ul>
                     <li> <a>home</a> </li>
