@@ -73,15 +73,19 @@
 }
 
 .SearchBar {
-  display: inline-block;
-  margin: 0 auto;
+  display: inline-flex;
+  height: 100px;
+  margin: 10px;
+  vertical-align: top;
   width: 50%;
 }
 
 .SearchBar > input {
-  margin: 20px;
+  display: block;
+  margin: auto;
   outline: none;
-  width: 100%;
+  padding: 0;
+  width: 90%;
 }
 
 hr {
