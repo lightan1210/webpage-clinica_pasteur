@@ -14,7 +14,7 @@ export default function Header() {
             <div className="BurgerButton">≡</div>
             <nav className="NavBar">
                 <ul>
-                    <li className='Active'><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
                     <li>
                         <a href="#">pacientes</a>
                         <ul className='SubMenu'>
