@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -14,6 +10,25 @@
 
 .BurgerButton {
   display: none;
+}
+
+.Logo {
+  display: inline-block;
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}
+
+.Logo > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.Logo > a > img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .NavBar {
@@ -38,7 +53,6 @@
   border-left: 1px solid #c75eae;
   border-right: 1px solid #c75eae;
   border-top: 1px solid #c75eae;
-  border-bottom: 1px solid #c75eae;
   color: #c75eae;
   display: flex;
   justify-content: center;
@@ -46,10 +60,6 @@
   font-size: .8em;
   padding: 5px;
   text-transform: capitalize;
-}
-
-.NavBar li:first-child {
-  background-color: #eebae2;
 }
 
 .NavBar li:hover {
@@ -62,17 +72,14 @@
   color: white;
 }
 
-.NavBar li:first-child>a {
-  color: white;
-}
-
 .SearchBar {
+  display: inline-block;
   margin: 0 auto;
   width: 50%;
 }
 
 .SearchBar > input {
-  margin: 20px 0;
+  margin: 20px;
   outline: none;
   width: 100%;
 }
@@ -81,7 +88,7 @@ hr {
   background-color: #332a86;
   height: 10px;
   margin: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -110,5 +117,6 @@ hr {
     display: none;
     flex-direction: column;
     font-size: 1.5em;
+    width: 100%;
   }
 }

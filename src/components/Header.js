@@ -1,6 +1,13 @@
+import logo from '../images/logo.png'
+
 export default function Header() {
     return (
         <header>
+            <div className="Logo">
+                <a href='#'>
+                    <img src={logo}></img>
+                </a>
+            </div>
             <form className="SearchBar" >
                 <input type="text" name="searchBar" placeholder="Buscar..."></input>
             </form>
