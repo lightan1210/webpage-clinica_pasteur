@@ -57,6 +57,7 @@
   color: #c75eae;
   display: flex;
   justify-content: center;
+  flex-grow: 1;
   font-size: .8em;
   padding: 4px;
   position: relative;
