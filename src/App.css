@@ -122,6 +122,18 @@ li:hover>.SubMenu {
   width: 90%;
 }
 
+.WhatsApp {
+  display: inline-flex;
+  margin: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.WhatsApp img {
+  width: 80px;
+}
+
 hr {
   background-color: #332a86;
   height: 10px;
@@ -140,6 +152,7 @@ hr {
     margin: 0 auto 5px;
     padding: 4px 8px;
     text-align: center;
+    user-select: none;
     width: 2%;
   }
 
@@ -206,5 +219,8 @@ hr {
 
   .SubMenu.Active li {
     display: block;
+  }
+
+  .WhatsApp {
   }
 }

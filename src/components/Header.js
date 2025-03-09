@@ -1,4 +1,5 @@
 import logo from '../images/logo.png'
+import whatsapp from '../images/whatsapp_icon.png'
 
 export default function Header() {
     return (
@@ -11,6 +12,11 @@ export default function Header() {
             <form className="SearchBar" >
                 <input type="text" name="searchBar" placeholder="Buscar..."></input>
             </form>
+            <div className='WhatsApp' title='Pedir turno'>
+                <a href="http://bit.ly/cpasteurwhatsapp" target='_blank'>
+                    <img src={whatsapp}/>
+                </a>
+            </div>
             <div className="BurgerButton">≡</div>
             <nav className="NavBar">
                 <ul>
