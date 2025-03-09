@@ -57,7 +57,6 @@
   color: #c75eae;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
   font-size: .8em;
   padding: 4px;
   position: relative;
@@ -134,27 +133,40 @@ hr {
     background-color: #332a86;
     box-shadow: 0 0 4px 0 #eebae2;
     border:1px solid #eebae2;
+    border-radius: 100%;
     color: #eebae2;
     display: block;
     margin: 0 auto 5px;
-    padding: 8px;
+    padding: 4px 8px;
+    text-align: center;
     width: 2%;
   }
 
   .BurgerButton:hover {
+    background-color: #eebae2;
     box-shadow: 0 0 4px 0 #332a86;
     color: #332a86;
-    background-color: #eebae2;
+    transition-duration: .2s;
   }
 
-  .BurgerButton+nav>ul {
+  .BurgerButton:hover+nav>ul {
     display: block;
-  }
+    transition: scale .3s;
+    scale: 1 1;
 
+    @starting-style {
+      scale: 1 0;
+    }
+  }
+  
   .NavBar>ul {
     display: none;
     flex-direction: column;
     font-size: 1.5em;
+    overflow: hidden;
+    scale: 1 0;
+    transition: scale .3s, display .3s linear allow-discrete;
+    transform-origin: top;
     width: 100%;
   }
 
