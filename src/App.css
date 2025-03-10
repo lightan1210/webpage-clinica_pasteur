@@ -111,15 +111,29 @@ li:hover>.SubMenu {
   height: 100px;
   margin: 10px;
   vertical-align: top;
-  width: 50%;
+  position: relative;
+  width: fit-content;
 }
 
 .SearchBar > input {
+  border: 2px solid black;
+  border-radius: 30px;
   display: block;
+  height: 30px;
   margin: auto;
   outline: none;
-  padding: 0;
-  width: 90%;
+  padding: 0 30px 0 10px;
+  width: 350px;
+}
+
+.SearchButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  top: 40px;
 }
 
 .WhatsApp {
@@ -172,6 +186,11 @@ hr {
       scale: 1 0;
     }
   }
+
+  .Logo {
+    display: block;
+    margin: auto;
+  }
   
   .NavBar>ul {
     display: none;
@@ -206,6 +225,21 @@ hr {
 
   li>.SubMenu {
     position: static;
+  }
+
+  .SearchBar{
+    display: block;
+    margin: 0 auto 15px;
+    height: max-content;
+  }
+  
+  .SearchBar input{
+    padding: 0 30px 0 10px;
+    vertical-align: middle;
+  }
+
+  .SearchButton {
+  top: 7px;
   }
 
   .SubMenu>li:hover {
