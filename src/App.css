@@ -165,13 +165,41 @@ footer .Info li {
   flex-grow: 1;
 }
 
-footer .Info li:nth-child(2) label {
-  display: block;
+footer .Info>li:nth-child(1) ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-  footer .Info li:nth-child(2) li {
-  display: inline-block;
-  margin: 10px;
+footer .Info>li:nth-child(1) ul>label {
+  flex-basis: 100%;
+}
+
+footer .Info>li:nth-child(1) li {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .Info>li:nth-child(1) li img:hover {
+  box-shadow: none;
+}
+
+footer .Info>li:nth-child(2) ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 15px;
+  justify-content: center;
+}
+
+footer .Info>li:nth-child(2) ul>label {
+  flex-basis: 100%;
+}
+
+footer .Info>li:nth-child(2) ul>li {
+  flex-grow: 0;
 }
 
 footer .SubInfo {
@@ -305,9 +333,25 @@ hr {
     display: flex;
     flex-direction: column;
   }
-
+  
   .SubMenu.Active li {
     display: block;
   }
-
+  
+  footer .Info>li:nth-child(1) ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  footer .Info>li:nth-child(1) ul li {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+  }
+  
+  footer .Info>li:nth-child(1) li img:hover {
+    box-shadow: none;
+  }
 }
