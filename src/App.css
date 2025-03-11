@@ -136,6 +136,30 @@ li:hover>.SubMenu {
   top: 40px;
 }
 
+.VideosCarrousel {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.VideosCarrousel video{
+  box-shadow: 0 0 5px #c75eae;
+  display: block;
+  margin: auto;
+  width: 100vw;
+}
+
+.VideosCarrousel .Epigraphy {
+  background-color: #eebae2;
+  box-shadow: 0 0 5px #c75eae;
+  box-sizing: border-box;
+  color: #332a86;
+  font-style: italic;
+  margin: auto;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+}
+
 .WhatsApp {
   display: inline-flex;
   margin: 10px;
