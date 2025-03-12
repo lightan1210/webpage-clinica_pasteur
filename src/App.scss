@@ -363,28 +363,86 @@ hr {
 main {
   position: relative;
   z-index: 0;
-
-  > .VideosCarrousel {
+  
+  > .Carousel {
     margin: 20px 0;
+    position: relative;
     width: 100%;
     
-    > .Epigraphy {
-      background-color: #eebae2;
-      box-shadow: 0 0 5px #c75eae;
-      box-sizing: border-box;
-      color: #332a86;
-      font-style: italic;
+    > .ItemCarousel {
+      display: none;
       margin: auto;
-      padding: 10px 5px;
-      text-align: center;
-      width: 80%;
+      width: 75%;
+
+      &.Active {
+        display: block;
+      }
+
+      > .Epigraphy {
+        background-color: #eebae2;
+        box-shadow: 0 0 5px #c75eae;
+        box-sizing: border-box;
+        color: #332a86;
+        font-style: italic;
+        margin: 0;
+        padding: 10px 5px;
+        text-align: center;
+        width: 100%;
+      }
+      
+      > video {
+        box-shadow: 0 0 5px #c75eae;
+        display: block;
+        width: 100%;
+      }
+
+      > img {
+        box-shadow: 0 0 5px #c75eae;
+        width: 100%;
+      }
     }
     
-    > video {
-      box-shadow: 0 0 5px #c75eae;
-      display: block;
-      margin: auto;
-      width: 80%;
+    +.dots {
+      text-align: center;
+
+        > .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+
+        &.active, &:hover {
+          background-color: #717171;
+        }
+      }
+    }
+
+    > .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    > .next, > .prev {
+
+      border-radius: 100%;
+      color: #332a86;
+      cursor: pointer;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      transition: 0.6s ease;
+      user-select: none;
+      width: auto;
+
+      &:hover {
+        color: #c75eae;
+      }
     }
   }
 }

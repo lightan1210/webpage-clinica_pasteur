@@ -1,6 +1,5 @@
 import phone from '../images/phone_icon.png'
 import whatsapp from '../images/whatsapp_icon.png'
-
 import instagram from '../images/instagram_icon.png'
 import facebook from '../images/facebook_icon.png'
 import linkedin from '../images/linkedin_icon.png'
