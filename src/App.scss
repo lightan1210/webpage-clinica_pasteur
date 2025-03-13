@@ -109,6 +109,14 @@
       position: static;
       text-transform: uppercase;
 
+      &.Active {
+        background-color: #eebae2;
+
+        > a {
+          color: white;
+        }
+      }
+
       &:hover {
         background-color: #eebae2;
         cursor: pointer;

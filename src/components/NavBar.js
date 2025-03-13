@@ -2,7 +2,7 @@ export default function NavBar() {
     return (
         <nav className="NavBar">
             <ul>
-                <li><a href="#">home</a></li>
+                <li className="Active"><a href="#">home</a></li>
                 <li>
                     <a href="#">pacientes</a>
                     <ul className='SubMenu'>
