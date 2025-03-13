@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 
@@ -5,6 +7,25 @@ import logo from '../images/logo.png'
 import whatsapp from '../images/whatsapp_icon.png'
 
 export default function Header() {
+    const [widthWindow, setWidthWIndow] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const burgerButton = document.getElementsByClassName('BurgerButton')[0];
+        if(widthWindow < 768)
+            burgerButton.style.display = 'block';
+        else{
+            burgerButton.style.display = 'none';
+            burgerButton.classList.remove("Active");
+        }
+
+    },[widthWindow]);
+    
+    const updateWindowDimensions = () => {
+        setWidthWIndow(window.innerWidth);
+    };
+
+    window.addEventListener('resize', updateWindowDimensions);
+
     return (
         <header>
             <div className="Logo">
@@ -18,7 +39,7 @@ export default function Header() {
                     <img src={whatsapp}/>
                 </a>
             </div>
-            { window.innerWidth < 768 && <div className="BurgerButton">≡</div> }
+            <div className="BurgerButton" onClick={() => {document.getElementsByClassName('BurgerButton')[0].classList.toggle('Active')}}>≡</div>
             <NavBar />
             <hr/>
         </header>

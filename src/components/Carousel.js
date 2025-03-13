@@ -6,7 +6,7 @@ import frentePasteur from '../images/imagenPasteur.png'
 
 export default function Carousel() {
     const [indexCarousel, setIndexCarousel] = useState(0);
-    const [maxIndexCarousel, setMaxIndexCarousel] = useState(2);
+    const maxIndexCarousel = 2;
 
     useEffect(() => {
         let i;

@@ -22,14 +22,16 @@
   border:1px solid #eebae2;
   border-radius: 100%;
   color: #eebae2;
+  cursor: pointer;
   display: block;
   margin: 0 auto 5px;
   padding: 4px 8px;
   text-align: center;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 2%;
 
-  &:hover {
+  &.Active {
     background-color: #eebae2;
     box-shadow: 0 0 4px 0 #332a86;
     color: #332a86;
@@ -51,7 +53,6 @@
   }
   
   @include tablet {
-    
     display: none;
   }
 }
@@ -91,8 +92,6 @@
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    scale: 1 0;
-    transition: scale .3s, display .3s linear allow-discrete;
     transform-origin: top;
     width: 100%;
     
@@ -242,7 +241,7 @@
   z-index: 1;
 
   img {
-    width: 55px;
+    width: 70px;
 
   }
 }
@@ -373,31 +372,43 @@ main {
       display: none;
       margin: auto;
       width: 75%;
-
+      
       &.Active {
         display: block;
       }
-
+      
       > .Epigraphy {
         background-color: #eebae2;
         box-shadow: 0 0 5px #c75eae;
         box-sizing: border-box;
         color: #332a86;
         font-style: italic;
+        height: 100%;
         margin: 0;
+        overflow: hidden;
         padding: 10px 5px;
         text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         width: 100%;
+
+        &:hover {
+          user-select: none;
+          white-space: wrap;
+        }
       }
       
       > video {
+        aspect-ratio: 9 / 5;
         box-shadow: 0 0 5px #c75eae;
-        display: block;
+        object-fit: fill;
         width: 100%;
       }
-
+      
       > img {
+        aspect-ratio: 9 / 5;
         box-shadow: 0 0 5px #c75eae;
+        object-fit: fill;
         width: 100%;
       }
     }
@@ -438,9 +449,10 @@ main {
       top: 50%;
       transition: 0.6s ease;
       user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       width: auto;
 
-      &:hover {
+      &:active {
         color: #c75eae;
       }
     }
