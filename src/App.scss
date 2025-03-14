@@ -57,6 +57,30 @@
   }
 }
 
+.DoctorsData {
+  align-items: stretch;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto auto;
+  height: 500px;
+  margin:auto;
+}
+
+.LoadingScreen {
+  animation: fadeIn 1s alternate-reverse infinite;
+  display: block;
+  height: 500px;
+  margin: auto;
+  opacity: 1;
+  user-select: none;
+  
+  @keyframes fadeIn {
+    to{
+      opacity: 0;
+    }
+  }
+}
+
 .Logo {
   display: block;
   height: 100px;
