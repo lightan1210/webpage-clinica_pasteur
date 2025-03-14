@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import NavBar from './NavBar';
 import SearchBar from './SearchBar';
@@ -29,9 +30,9 @@ export default function Header() {
     return (
         <header>
             <div className="Logo">
-                <a href='#'>
+                <Link to='/'>
                     <img src={logo}></img>
-                </a>
+                </Link>
             </div>
             <SearchBar />
             <div className='WhatsApp' title='Pedir turno'>

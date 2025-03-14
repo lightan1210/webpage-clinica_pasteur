@@ -1,79 +1,81 @@
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
     return (
         <nav className="NavBar">
             <ul>
-                <li className="Active"><a href="#">home</a></li>
+                <li className="Active"><Link to="/">home</Link></li>
                 <li>
-                    <a href="#">pacientes</a>
+                    <Link to="#">pacientes</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">informacion util</a></li>
+                        <li><Link to="#">informacion util</Link></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">la clinica</a>
+                    <Link to="#">la clinica</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">mision</a></li>
-                        <li><a href="#">vision</a></li>
-                        <li><a href="#">filosofia</a></li>
-                        <li><a href="#">valores</a></li>
+                        <li><Link to="#">mision</Link></li>
+                        <li><Link to="#">vision</Link></li>
+                        <li><Link to="#">filosofia</Link></li>
+                        <li><Link to="#">valores</Link></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">puntos de atencion</a>
+                    <Link to="#">puntos de atencion</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">rioja 36</a></li>
-                        <li><a href="#">cai rioja 113</a></li>
-                        <li><a href="#">cari roca 109</a></li>
-                        <li><a href="#">cai rufino ortega 130</a></li>
-                        <li><a href="#">cai san martin 130</a></li>
-                        <li><a href="#">cai oftalmologia</a></li>
+                        <li><Link to="#">rioja 36</Link></li>
+                        <li><Link to="#">cai rioja 113</Link></li>
+                        <li><Link to="#">cari roca 109</Link></li>
+                        <li><Link to="#">cai rufino ortega 130</Link></li>
+                        <li><Link to="#">cai san martin 130</Link></li>
+                        <li><Link to="#">cai oftalmologia</Link></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">servicios</a>
+                    <Link to="#">servicios</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">cardiologia</a></li>
-                        <li><a href="#">cirugia cardiovascular</a></li>
-                        <li><a href="#">clinica medica</a></li>
-                        <li><a href="#">emergencias</a></li>
-                        <li><a href="#">endoscopia</a></li>
-                        <li><a href="#">hemoterapia</a></li>
-                        <li><a href="#">hepatologia</a></li>
-                        <li><a href="#">imagenes</a></li>
-                        <li><a href="#">kinesiologia</a></li>
-                        <li><a href="#">laboratorio</a></li>
-                        <li><a href="#">nefrologia</a></li>
-                        <li><a href="#">obesidad, diabetes y metabolismo</a></li>
-                        <li><a href="#">oftalmologia</a></li>
-                        <li><a href="#">unidad materno infantil</a></li>
-                        <li><a href="#">unidad quirurgica</a></li>
-                        <li><a href="#">unidad de terapia intensiva</a></li>
-                        <li><a href="#">oncologia</a></li>
-                        <li><a href="#">hemodinamia e intervencionismo</a></li>
-                        <li><a href="#">uco unidad coronaria</a></li>
+                        <li><Link to="#">cardiologia</Link></li>
+                        <li><Link to="#">cirugia cardiovascular</Link></li>
+                        <li><Link to="#">clinica medica</Link></li>
+                        <li><Link to="#">emergencias</Link></li>
+                        <li><Link to="#">endoscopia</Link></li>
+                        <li><Link to="#">hemoterapia</Link></li>
+                        <li><Link to="#">hepatologia</Link></li>
+                        <li><Link to="#">imagenes</Link></li>
+                        <li><Link to="#">kinesiologia</Link></li>
+                        <li><Link to="#">laboratorio</Link></li>
+                        <li><Link to="#">nefrologia</Link></li>
+                        <li><Link to="#">obesidad, diabetes y metabolismo</Link></li>
+                        <li><Link to="#">oftalmologia</Link></li>
+                        <li><Link to="#">unidad materno infantil</Link></li>
+                        <li><Link to="#">unidad quirurgica</Link></li>
+                        <li><Link to="#">unidad de terapia intensiva</Link></li>
+                        <li><Link to="#">oncologia</Link></li>
+                        <li><Link to="#">hemodinamia e intervencionismo</Link></li>
+                        <li><Link to="#">uco unidad coronaria</Link></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">telemedicina</a>
+                    <Link to="#">telemedicina</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">para medicos</a></li>
-                        <li><a href="#">para medicos (videos)</a></li>
-                        <li><a href="#">para pacientes</a></li>
-                        <li><a href="#">para pacientes (videos)</a></li>
+                        <li><Link to="#">para medicos</Link></li>
+                        <li><Link to="#">para medicos (videos)</Link></li>
+                        <li><Link to="#">para pacientes</Link></li>
+                        <li><Link to="#">para pacientes (videos)</Link></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="#">staff</a>
+                    <Link to="/staff">staff</Link>
                     <ul className='SubMenu'>
-                        <li><a href="#">listado por nombre</a></li>
-                        <li><a href="#">listado por especialidad</a></li>
-                        <li><a href="#">listado por pda</a></li>
+                        <li><Link to="#">listado por nombre</Link></li>
+                        <li><Link to="#">listado por especialidad</Link></li>
+                        <li><Link to="#">listado por pda</Link></li>
                     </ul>
                 </li>
-                <li> <a href="#">docencia</a> </li>
-                <li> <a href="#">contacto</a> </li>
-                <li> <a href="#">recursos</a> </li>
+                <li> <Link to="#">docencia</Link> </li>
+                <li> <Link to="#">contacto</Link> </li>
+                <li> <Link to="#">recursos</Link> </li>
             </ul>
         </nav>
     );
