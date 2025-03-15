@@ -35,7 +35,7 @@ export default function Header() {
                     <img src={logo}></img>
                 </Link>
             </div>
-            <SearchBar filterText={filterText} onFilterTextChange={setFilterText}/>
+            <SearchBar filterText={filterText} onFilterTextChange={setFilterText} />
             <div className='WhatsApp' title='Pedir turno'>
                 <a href="http://bit.ly/cpasteurwhatsapp" target='_blank'>
                     <img src={whatsapp}/>

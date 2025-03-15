@@ -43,10 +43,10 @@ export default function Staff() {
         <>
             {
                 isLoading ? <Loader /> : 
-                    <>
+                    <div className="StaffBody">
                         <SearchBar filterText={filterText} onFilterTextChange={setFilterText}/>
                         <DoctorsTable doctors={allDoctors} filterText={filterText}/>
-                    </>
+                    </div>
             }
         </>
     );

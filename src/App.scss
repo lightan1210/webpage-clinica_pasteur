@@ -90,8 +90,6 @@
       }
     }
   }
-  
-
 }
 
 .FilterTable {
@@ -300,6 +298,27 @@
     position: relative;
     vertical-align: top;
     width: fit-content;
+  }
+}
+
+.StaffBody {
+  
+  > .SearchBar {
+    display: flex;
+    margin: 10px auto;
+    width: 90%;
+
+    > input {
+      padding: 0 10px;
+      width: 100%;
+    }
+
+    > .SearchButton {
+      display: none;
+    }
+  }
+  @include tablet {
+
   }
 }
 
