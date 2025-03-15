@@ -9,6 +9,7 @@ import whatsapp from '../images/whatsapp_icon.png'
 
 export default function Header() {
     const [widthWindow, setWidthWIndow] = useState(window.innerWidth);
+    const [filterText, setFilterText] = useState('');
 
     useEffect(() => {
         const burgerButton = document.getElementsByClassName('BurgerButton')[0];
@@ -34,7 +35,7 @@ export default function Header() {
                     <img src={logo}></img>
                 </Link>
             </div>
-            <SearchBar />
+            <SearchBar filterText={filterText} onFilterTextChange={setFilterText}/>
             <div className='WhatsApp' title='Pedir turno'>
                 <a href="http://bit.ly/cpasteurwhatsapp" target='_blank'>
                     <img src={whatsapp}/>
