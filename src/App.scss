@@ -58,12 +58,51 @@
 }
 
 .DoctorsData {
-  align-items: stretch;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: auto auto auto auto auto;
-  height: 500px;
-  margin:auto;
+  margin: auto;
+  width: 90%;
+
+  > tbody {
+
+    > .TableHeader {
+      > * {
+        background-color: #332a86;
+        border: 1px solid black;
+        color: #eebae2;
+      }
+    }
+  
+    > .Doctor:nth-child(even) {
+      background-color: #c75eae;
+      color: white;
+    }
+  
+    > .Doctor:nth-child(odd) {
+      background-color: #eebae2;
+      color: #332a86;
+    }
+  
+    > .Doctor {
+      text-align: center;
+    
+      > * {
+  
+        border: 1px solid black;
+      }
+    }
+  }
+  
+
+}
+
+.FilterTable {
+  border: 2px solid black;
+  border-radius: 30px;
+  display: block;
+  height: 24px;
+  margin: 20px auto;
+  outline: none;
+  padding: 0 10px;
+  width: 80%;
 }
 
 .LoadingScreen {

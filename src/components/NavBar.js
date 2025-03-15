@@ -67,11 +67,11 @@ export default function NavBar() {
                 
                 <li>
                     <Link to="/staff">staff</Link>
-                    <ul className='SubMenu'>
+                    {/* <ul className='SubMenu'>
                         <li><Link to="#">listado por nombre</Link></li>
                         <li><Link to="#">listado por especialidad</Link></li>
                         <li><Link to="#">listado por pda</Link></li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li> <Link to="#">docencia</Link> </li>
                 <li> <Link to="#">contacto</Link> </li>
