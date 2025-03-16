@@ -5,6 +5,7 @@ import vision from '../images/vision_image.avif'
 import philosophy from '../images/philosophy_image.avif'
 import values from '../images/values_image.avif'
 import Approach from '../components/Approach'
+import Carousel from '../components/Carousel'
 
 export default function About() {
     return (
@@ -16,6 +17,9 @@ export default function About() {
 
                 </i>
             </p>
+
+            {/* COLOCAR VIDEOS */}
+            
             <Approach title={"Misión"} image={mision} description={"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."}/>
             
             <Approach title={"Visión"} image={vision} description={"Nos vemos como referentes en calidad e integralidad de servicios en salud en Neuquén y zonas aledañas."}/>

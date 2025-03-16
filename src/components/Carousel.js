@@ -4,9 +4,9 @@ import EpigraphedImage from "./EpigraphedImage";
 
 import frentePasteur from '../images/imagenPasteur.png'
 
-export default function Carousel() {
+export default function Carousel({ maxIndex }) {
     const [indexCarousel, setIndexCarousel] = useState(0);
-    const maxIndexCarousel = 2;
+    const maxIndexCarousel = maxIndex;
 
     useEffect(() => {
         let i;
@@ -36,12 +36,13 @@ export default function Carousel() {
                 </div>
 
                 <a className="prev" onClick={() => setIndexCarousel((!(indexCarousel)) ? maxIndexCarousel-1 : indexCarousel-1)}>&#10094;</a>
-                <a className="next" onClick={() => setIndexCarousel(indexCarousel == maxIndexCarousel-1 ? 0 : indexCarousel+1)}>&#10095;</a>
+                <a className="next" onClick={() => setIndexCarousel(indexCarousel === maxIndexCarousel-1 ? 0 : indexCarousel+1)}>&#10095;</a>
 
             </div>
             <div className="dots">
-                <span className="dot" onClick={() => setIndexCarousel(0)}></span>
-                <span className="dot" onClick={() => setIndexCarousel(1)}></span>
+                {Array.from({length: maxIndexCarousel},
+                    (_,i) => <span className="dot" key={i} onClick={() => setIndexCarousel(i)}></span>
+                )}
             </div>
         </>
     );

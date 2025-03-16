@@ -36,25 +36,58 @@
     height: 300px;
     width: 300px;
   }
+
+  @include tablet {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+
+    > .Logo {
+      grid-column: span 2;
+      width: 20%;
+    }
+    
+    > .Epigraphy {
+      grid-column: span 2;
+    }
+  }
+
+  @include large {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    > .Logo {
+      grid-column: span 4;
+      width: 20%;
+    }
+    
+    > .Epigraphy {
+      grid-column: span 4;
+    }
+  }
 }
 
 .Approach {
-  background-color: #717171d2;
+  background-color: #eebae29b;
+  box-shadow: 0 0 5px #c75eae;
   color: #332a86;
   display: block;
-  height: 400px;
+  height: 380px;
   margin: auto;
   position: relative;
   width: 60%;
 
   h2 {
     display: block;
+    padding-top: 15px;
     text-align: center;
   }
 
   img {
-    object-fit: fill;
-    height: 345px;
+    object-fit: cover;
+    height: 313px;
     margin: auto;
     position: absolute;
     width: 100%;
@@ -63,7 +96,20 @@
   
   p {
     color: white;
-    padding: 10px;
+    margin: 0;
+    padding: 5px;
+
+    > ol {
+      margin: 0;
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+
+    img {
+      height: 293px;
+    }
   }
 }
 
@@ -109,8 +155,10 @@
 }
 
 .DoctorsTable {
+  box-shadow: 0 0 5px #c75eae;
   margin: auto;
   width: 90%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   > tbody {
 
@@ -323,6 +371,7 @@
 
   p {
     text-align: justify;
+    text-indent: 40px;
     white-space: wrap;
   }
   
@@ -335,12 +384,21 @@
       li {
         
         &::marker {
-          font-weight: bold;
           color: red;
+          font-weight: bold;
         }
       }
-      
     } 
+    &.Yes {
+      list-style-type: "\2713  ";
+      
+      li {
+        &::marker {
+          color: green;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 
