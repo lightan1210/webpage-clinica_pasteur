@@ -22,14 +22,14 @@ export default function NavBar() {
                 <li className={isActive('/pacientes')}>
                     <Link to="/pacientes" onClick={() => setNewActive(1)}>pacientes</Link>
                 </li>
-                <li>
-                    <Link to="#">la clinica</Link>
-                    <ul className='SubMenu'>
+                <li className={isActive('/about')}>
+                    <Link to="/about">la clinica</Link>
+                    {/* <ul className='SubMenu'>
                         <li><Link to="#">mision</Link></li>
                         <li><Link to="#">vision</Link></li>
                         <li><Link to="#">filosofia</Link></li>
                         <li><Link to="#">valores</Link></li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
                     <Link to="#">puntos de atencion</Link>

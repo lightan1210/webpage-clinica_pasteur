@@ -16,6 +16,57 @@
   }
 }
 
+.About {
+  > .Logo {
+    height: auto;
+    width: 50%;
+  }
+
+  > .Epigraphy {
+    margin: 0 auto;
+    text-align: justify;
+    width: 75%;
+  }
+
+  h2 {
+    display: block;
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.Approach {
+  background-color: #717171d2;
+  color: #332a86;
+  display: block;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  width: 60%;
+
+  h2 {
+    display: block;
+    text-align: center;
+  }
+
+  img {
+    object-fit: fill;
+    height: 345px;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  p {
+    color: white;
+    padding: 10px;
+  }
+}
+
 .BurgerButton {
   background-color: #332a86;
   box-shadow: 0 0 4px 0 #eebae2;
