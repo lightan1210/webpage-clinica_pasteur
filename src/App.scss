@@ -263,6 +263,36 @@
   }
 }
 
+.Patients {
+  padding: 20px;
+  h1,h2,h3 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+    white-space: wrap;
+  }
+  
+  ul {
+    &.Normal {
+      list-style-type: circle;
+    }
+    &.Not {
+      list-style-type: "X ";
+      li {
+        
+        &::marker {
+          font-weight: bold;
+          color: red;
+        }
+      }
+      
+    } 
+  }
+}
+
 .SearchBar {
   display: block;
   height: max-content;
