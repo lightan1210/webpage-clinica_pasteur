@@ -4,6 +4,7 @@ import Layout from "./pages/Layout.js";
 import Home from "./pages/Home.js";
 import NoPage from "./pages/NoPage.js";
 import Staff from "./pages/Staff.js";
+import Patients from "./pages/Patients.js"
 
 import './App.scss';
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/staff" element={<Staff />} />
+          <Route path="/pacientes" element={<Patients />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

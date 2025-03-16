@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar() {
+
+    const setNewActive = (newActive) => {
+        const navBar = document.getElementsByClassName('NavBar')[0].querySelector("ul");
+        const activeElement = navBar.getElementsByClassName('Active')[0];
+        activeElement.classList.remove("Active");
+        navBar.children[newActive].classList.add("Active");
+    };
+    
+    const location = useLocation();
+    const isActive = (path) => location.pathname === path ? 'Active' : '';
+
     return (
         <nav className="NavBar">
             <ul>
-                <li className="Active"><Link to="/">home</Link></li>
-                <li>
-                    <Link to="#">pacientes</Link>
-                    <ul className='SubMenu'>
-                        <li><Link to="#">informacion util</Link></li>
-                    </ul>
+                <li className={isActive('/')}>
+                    <Link to="/" onClick={() => setNewActive(0)}>home</Link>
+                </li>
+                <li className={isActive('/pacientes')}>
+                    <Link to="/pacientes" onClick={() => setNewActive(1)}>pacientes</Link>
                 </li>
                 <li>
                     <Link to="#">la clinica</Link>
@@ -65,8 +76,8 @@ export default function NavBar() {
                     </ul>
                 </li>
                 
-                <li>
-                    <Link to="/staff">staff</Link>
+                <li className={isActive('/staff')}>
+                    <Link to="/staff" onClick={() => setNewActive(6)}>staff</Link>
                     {/* <ul className='SubMenu'>
                         <li><Link to="#">listado por nombre</Link></li>
                         <li><Link to="#">listado por especialidad</Link></li>
