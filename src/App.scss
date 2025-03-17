@@ -20,11 +20,8 @@
   > .Approaches {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    > .Approach:nth-child(3) {
-      grid-column: span 2;
-    }
   }
   
   > .Epigraphy {
@@ -57,16 +54,6 @@
 
     > .Logo {
       width: 50%;
-    }
-  }
-
-  @include large {
-    > .Approaches {
-      grid-template-columns: 1fr 1fr 1fr;
-
-      > .Approach:nth-child(3) {
-        grid-column: span 1;
-      }
     }
   }
 }

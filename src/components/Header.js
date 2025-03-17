@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavBar from './NavBar';
@@ -11,13 +11,15 @@ export default function Header() {
     const [widthWindow, setWidthWIndow] = useState(window.innerWidth);
     const [filterText, setFilterText] = useState('');
 
+    const BurgerButtonElement = useRef();
+
+    
     useEffect(() => {
-        const burgerButton = document.getElementsByClassName('BurgerButton')[0];
         if(widthWindow < 768)
-            burgerButton.style.display = 'block';
+            BurgerButtonElement.current.style.display = 'block';
         else{
-            burgerButton.style.display = 'none';
-            burgerButton.classList.remove("Active");
+            BurgerButtonElement.current.style.display = 'none';
+            BurgerButtonElement.current.classList.remove("Active");
         }
 
     },[widthWindow]);
@@ -41,7 +43,7 @@ export default function Header() {
                     <img src={whatsapp}/>
                 </a>
             </div>
-            <div className="BurgerButton" onClick={() => {document.getElementsByClassName('BurgerButton')[0].classList.toggle('Active')}}>≡</div>
+            <div className="BurgerButton" ref={BurgerButtonElement} onClick={() => {BurgerButtonElement.current.classList.toggle('Active')}}>≡</div>
             <NavBar />
             <hr/>
         </header>

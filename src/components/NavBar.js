@@ -1,10 +1,13 @@
+import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar() {
 
+    const NavBarElement = useRef();
+
     const setNewActive = (newActive) => {
-        const navBar = document.getElementsByClassName('NavBar')[0].querySelector("ul");
-        const activeElement = navBar.getElementsByClassName('Active')[0];
+        const navBar = NavBarElement.current.querySelector("ul");
+        const activeElement = navBar.querySelector('.Active');
         activeElement.classList.remove("Active");
         navBar.children[newActive].classList.add("Active");
     };
@@ -13,7 +16,7 @@ export default function NavBar() {
     const isActive = (path) => location.pathname === path ? 'Active' : '';
 
     return (
-        <nav className="NavBar">
+        <nav ref={NavBarElement} className="NavBar">
             <ul>
                 <li className={isActive('/')}>
                     <Link to="/" onClick={() => setNewActive(0)}>home</Link>

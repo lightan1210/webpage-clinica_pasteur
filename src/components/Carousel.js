@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import EpigraphedVideo from "./EpigraphedVideo";
 import EpigraphedImage from "./EpigraphedImage";
 
@@ -6,10 +6,13 @@ export default function Carousel({ itemsCarousel = [] }) {
     const [indexCarousel, setIndexCarousel] = useState(0);
     const maxIndexCarousel = itemsCarousel.length;
 
+    const itemsCarouselElement = useRef();
+    const dotsElement = useRef();
+
     useEffect(() => {
         let i;
-        let slides = document.getElementsByClassName("ItemCarousel");
-        let dots = document.getElementsByClassName("dot");
+        let slides = itemsCarouselElement.current.getElementsByClassName("ItemCarousel");
+        let dots = dotsElement.current.getElementsByClassName("dot");
 
         for(i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
@@ -25,7 +28,7 @@ export default function Carousel({ itemsCarousel = [] }) {
 
     return (
         <>
-            <div className="Carousel">
+            <div ref={itemsCarouselElement} className="Carousel">
                 {
                     itemsCarousel.map(({isAVideo, mediaSrc, description}, key) => {
                         return (
@@ -41,7 +44,7 @@ export default function Carousel({ itemsCarousel = [] }) {
                 <div className="next" onClick={() => setIndexCarousel(indexCarousel === maxIndexCarousel-1 ? 0 : indexCarousel+1)}>&#10095;</div>
 
             </div>
-            <div className="dots">
+            <div ref={dotsElement} className="dots">
                 {Array.from({length: maxIndexCarousel},
                     (_,i) => <span className="dot" key={i} onClick={() => setIndexCarousel(i)}></span>
                 )}

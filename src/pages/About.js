@@ -7,23 +7,24 @@ import philosophy from '../images/philosophy_image.avif'
 
 import Approach from '../components/Approach'
 import Carousel from '../components/Carousel'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function About() {
     const [widthWindow, setWidthWIndow] = useState(window.innerWidth);
 
+    const aboutElement = useRef();
+    const approachesElement = useRef();
+
     useEffect(() => {
-        const AboutElement = document.getElementsByClassName('About')[0];
-        const ApproachesElement = document.getElementsByClassName('Approaches')[0];
         if(widthWindow < 768) {
-            AboutElement.querySelector('.Carousel').style.display = 'block';
-            AboutElement.querySelector('.dots').style.display = 'block';
-            ApproachesElement.style.display = 'none';
+            aboutElement.current.querySelector('.Carousel').style.display = 'block';
+            aboutElement.current.querySelector('.dots').style.display = 'block';
+            approachesElement.current.style.display = 'none';
         }
         else{
-            AboutElement.querySelector('.Carousel').style.display = 'none';
-            AboutElement.querySelector('.dots').style.display = 'none';
-            ApproachesElement.style.display = 'grid';
+            aboutElement.current.querySelector('.Carousel').style.display = 'none';
+            aboutElement.current.querySelector('.dots').style.display = 'none';
+            approachesElement.current.style.display = '';
         }
     },[widthWindow]);
 
@@ -34,7 +35,7 @@ export default function About() {
     window.addEventListener('resize', updateWindowDimensions);
 
     return (
-        <div className="About">
+        <div ref={aboutElement} className="About">
             <img src={logo} alt="logo clinica pasteur" className='Logo' />
             <p className='Epigraphy'>
                 <i>
@@ -53,7 +54,7 @@ export default function About() {
                 ]}/>
             }
 
-            <div className='Approaches'>
+            <div ref={approachesElement} className='Approaches'>
 
                 <Approach title={"Misión"} image={mision} description={"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."}/>
                 
