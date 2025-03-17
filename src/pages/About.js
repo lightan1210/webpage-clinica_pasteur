@@ -3,14 +3,39 @@ import logo from '../images/logo.png'
 import mision from '../images/mision_image.avif'
 import vision from '../images/vision_image.avif'
 import philosophy from '../images/philosophy_image.avif'
-import values from '../images/values_image.avif'
+// import values from '../images/values_image.avif'
+
 import Approach from '../components/Approach'
 import Carousel from '../components/Carousel'
+import { useEffect, useState } from 'react'
 
 export default function About() {
+    const [widthWindow, setWidthWIndow] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const AboutElement = document.getElementsByClassName('About')[0];
+        const ApproachesElement = document.getElementsByClassName('Approaches')[0];
+        if(widthWindow < 768) {
+            AboutElement.querySelector('.Carousel').style.display = 'block';
+            AboutElement.querySelector('.dots').style.display = 'block';
+            ApproachesElement.style.display = 'none';
+        }
+        else{
+            AboutElement.querySelector('.Carousel').style.display = 'none';
+            AboutElement.querySelector('.dots').style.display = 'none';
+            ApproachesElement.style.display = 'grid';
+        }
+    },[widthWindow]);
+
+    const updateWindowDimensions = () => {
+        setWidthWIndow(window.innerWidth);
+    };
+
+    window.addEventListener('resize', updateWindowDimensions);
+
     return (
         <div className="About">
-            <img src={logo} className='Logo' />
+            <img src={logo} alt="logo clinica pasteur" className='Logo' />
             <p className='Epigraphy'>
                 <i>
                     Clínica Pasteur nació hace más de 50 años en la ciudad de Neuquén con la pasión de dar un aporte positivo y significativo en la vida de los patagónicos. A lo largo de los años, mantuvimos nuestra misión y sueño de crecer en el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia.
@@ -19,14 +44,26 @@ export default function About() {
             </p>
 
             {/* COLOCAR VIDEOS */}
-            
-            <Approach title={"Misión"} image={mision} description={"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."}/>
-            
-            <Approach title={"Visión"} image={vision} description={"Nos vemos como referentes en calidad e integralidad de servicios en salud en Neuquén y zonas aledañas."}/>
 
-            <Approach title={"Filosofía"} image={philosophy} description={"En Clínica Pasteur priorizamos la necesidad del paciente, generando un vínculo de confianza con él y su familia, basados en una conducta que se caracteriza por la calidez humana,  el profesionalismo y el respeto por la vida. Nuestra manera de trabajar está basada en el trabajo en equipo, el compañerismo en un ámbito de cordialidad y respeto, done los profesionales puedan desarrollarse en un marco de equidad y logros por mérito."}/>
+            {
+                <Carousel itemsCarousel={[
+                    {"isAVideo":false, "mediaSrc":require('../images/mision_image.avif'), "description":"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."},
+                    {"isAVideo":false, "mediaSrc":require('../images/vision_image.avif'), "description":"Nos vemos como referentes en calidad e integralidad de servicios en salud en Neuquén y zonas aledañas."},
+                    {"isAVideo":false, "mediaSrc":require('../images/philosophy_image.avif'), "description":"En Clínica Pasteur priorizamos la necesidad del paciente, generando un vínculo de confianza con él y su familia, basados en una conducta que se caracteriza por la calidez humana,  el profesionalismo y el respeto por la vida. Nuestra manera de trabajar está basada en el trabajo en equipo, el compañerismo en un ámbito de cordialidad y respeto, done los profesionales puedan desarrollarse en un marco de equidad y logros por mérito."}
+                ]}/>
+            }
 
-            <Approach title={"Valores"} image={values} description={<ol>
+            <div className='Approaches'>
+
+                <Approach title={"Misión"} image={mision} description={"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."}/>
+                
+                <Approach title={"Visión"} image={vision} description={"Nos vemos como referentes en calidad e integralidad de servicios en salud en Neuquén y zonas aledañas."}/>
+
+                <Approach title={"Filosofía"} image={philosophy} description={"En Clínica Pasteur priorizamos la necesidad del paciente, generando un vínculo de confianza con él y su familia, basados en una conducta que se caracteriza por la calidez humana,  el profesionalismo y el respeto por la vida. Nuestra manera de trabajar está basada en el trabajo en equipo, el compañerismo en un ámbito de cordialidad y respeto, done los profesionales puedan desarrollarse en un marco de equidad y logros por mérito."}/>
+
+                {/* VER DE AGREGAR EL CUARTO ELEMENTO */}
+
+                {/* <Approach title={"Valores"} image={values} description={<ol>
                     <li>Humanidad - calidez humana.</li>
                     <li>Confianza.</li>
                     <li>Respeto a la vida (desde la concepción hasta la muerte) y a la persona .</li>
@@ -35,7 +72,9 @@ export default function About() {
                     <li>Meritocracia y equidad.</li>
                     <li>Profesionalismo.</li>
                     <li>Conducta y cultura familiar.</li>
-                </ol>} />
+                </ol>} /> */}
+            </div>
+            
         </div>
     );
 }
