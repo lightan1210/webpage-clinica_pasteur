@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webpage-clinica_pasteur/static/css/main.43bdd578.css",
-    "main.js": "/webpage-clinica_pasteur/static/js/main.ea4edd54.js",
+    "main.js": "/webpage-clinica_pasteur/static/js/main.3bdef145.js",
     "static/js/453.6102a035.chunk.js": "/webpage-clinica_pasteur/static/js/453.6102a035.chunk.js",
     "static/media/imagenPasteur.png": "/webpage-clinica_pasteur/static/media/imagenPasteur.33e9212da668afc79019.png",
     "static/media/instagram_icon.png": "/webpage-clinica_pasteur/static/media/instagram_icon.f2d8b75d716dc43b961f.png",
@@ -14,11 +14,11 @@
     "static/media/linkedin_icon.png": "/webpage-clinica_pasteur/static/media/linkedin_icon.6892b3ae328c7a1e055f.png",
     "index.html": "/webpage-clinica_pasteur/index.html",
     "main.43bdd578.css.map": "/webpage-clinica_pasteur/static/css/main.43bdd578.css.map",
-    "main.ea4edd54.js.map": "/webpage-clinica_pasteur/static/js/main.ea4edd54.js.map",
+    "main.3bdef145.js.map": "/webpage-clinica_pasteur/static/js/main.3bdef145.js.map",
     "453.6102a035.chunk.js.map": "/webpage-clinica_pasteur/static/js/453.6102a035.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43bdd578.css",
-    "static/js/main.ea4edd54.js"
+    "static/js/main.3bdef145.js"
   ]
 }
