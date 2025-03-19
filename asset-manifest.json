@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/webpage-clinica_pasteur/static/css/main.43bdd578.css",
+    "main.js": "/webpage-clinica_pasteur/static/js/main.d3041a84.js",
+    "static/js/453.6102a035.chunk.js": "/webpage-clinica_pasteur/static/js/453.6102a035.chunk.js",
+    "static/media/imagenPasteur.png": "/webpage-clinica_pasteur/static/media/imagenPasteur.33e9212da668afc79019.png",
+    "static/media/instagram_icon.png": "/webpage-clinica_pasteur/static/media/instagram_icon.f2d8b75d716dc43b961f.png",
+    "static/media/whatsapp_icon.png": "/webpage-clinica_pasteur/static/media/whatsapp_icon.31d4b1d27126bcc1f665.png",
+    "static/media/philosophy_image.avif": "/webpage-clinica_pasteur/static/media/philosophy_image.6194f85c66f75ca2255c.avif",
+    "static/media/phone_icon.png": "/webpage-clinica_pasteur/static/media/phone_icon.980a114399160bf5317a.png",
+    "static/media/logo.png": "/webpage-clinica_pasteur/static/media/logo.34b2c00f20e0f2b64e2f.png",
+    "static/media/mision_image.avif": "/webpage-clinica_pasteur/static/media/mision_image.e0835f8ed671dc348dbd.avif",
+    "static/media/vision_image.avif": "/webpage-clinica_pasteur/static/media/vision_image.6b1a300b9b7946366cbb.avif",
+    "static/media/linkedin_icon.png": "/webpage-clinica_pasteur/static/media/linkedin_icon.6892b3ae328c7a1e055f.png",
+    "index.html": "/webpage-clinica_pasteur/index.html",
+    "main.43bdd578.css.map": "/webpage-clinica_pasteur/static/css/main.43bdd578.css.map",
+    "main.d3041a84.js.map": "/webpage-clinica_pasteur/static/js/main.d3041a84.js.map",
+    "453.6102a035.chunk.js.map": "/webpage-clinica_pasteur/static/js/453.6102a035.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43bdd578.css",
+    "static/js/main.d3041a84.js"
+  ]
+}
