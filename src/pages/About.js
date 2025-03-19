@@ -50,7 +50,7 @@ export default function About() {
                 <Carousel itemsCarousel={[
                     {"isAVideo":false, "mediaSrc":require('../images/mision_image.avif'), "description":"Nuestra misión es el cuidado integral de la salud con humanidad, excelencia médica y tecnología avanzada, con acompañamiento del paciente y su familia."},
                     {"isAVideo":false, "mediaSrc":require('../images/vision_image.avif'), "description":"Nos vemos como referentes en calidad e integralidad de servicios en salud en Neuquén y zonas aledañas."},
-                    {"isAVideo":false, "mediaSrc":require('../images/philosophy_image.avif'), "description":"En Clínica Pasteur priorizamos la necesidad del paciente, generando un vínculo de confianza con él y su familia, basados en una conducta que se caracteriza por la calidez humana,  el profesionalismo y el respeto por la vida. Nuestra manera de trabajar está basada en el trabajo en equipo, el compañerismo en un ámbito de cordialidad y respeto, done los profesionales puedan desarrollarse en un marco de equidad y logros por mérito."}
+                    {"isAVideo":false, "mediaSrc":require('../images/philosophy_image.avif'), "description":"En Clínica Pasteur priorizamos la necesidad del paciente, generando un vínculo de confianza con él y su familia, basados en una conducta que se caracteriza por la calidez humana,  el profesionalismo y el respeto por la vida. Nuestra manera de trabajar está basada en el trabajo en equipo, el compañerismo en un ámbito de cordialidad y respeto, donde los profesionales puedan desarrollarse en un marco de equidad y logros por mérito."}
                 ]}/>
             }
 

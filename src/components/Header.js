@@ -34,13 +34,13 @@ export default function Header() {
         <header>
             <div className="Logo">
                 <Link to='/'>
-                    <img src={logo}></img>
+                    <img src={logo} alt='altLogo'></img>
                 </Link>
             </div>
             <SearchBar filterText={filterText} onFilterTextChange={setFilterText} />
             <div className='WhatsApp' title='Pedir turno'>
-                <a href="http://bit.ly/cpasteurwhatsapp" target='_blank'>
-                    <img src={whatsapp}/>
+                <a href="http://bit.ly/cpasteurwhatsapp" target='_blank' rel='noreferrer'>
+                    <img src={whatsapp} alt='altWhatsappIcon'/>
                 </a>
             </div>
             <div className="BurgerButton" ref={BurgerButtonElement} onClick={() => {BurgerButtonElement.current.classList.toggle('Active')}}>≡</div>
